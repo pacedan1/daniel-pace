@@ -1,0 +1,335 @@
+// code for down arrow styling
+%arrow-down {
+  border: 0 solid transparent;
+  border-width: 5px 5px 0;
+  border-top: 5px solid black;
+}
+
+// 
+// General styling
+// 
+*{
+  font-size: 0.9rem;
+}
+
+h2, .h2{
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+}
+h3, .h3{
+  font-size: 1rem;
+}
+
+body{
+  // gradient background
+  background: #f2f6f8; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f2f6f8 0%, #d8e1e7 33%, #b5c6d0 68%, #e0eff9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f2f6f8 0%,#d8e1e7 33%,#b5c6d0 68%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #f2f6f8 0%,#d8e1e7 33%,#b5c6d0 68%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  min-height: 100%;
+}
+
+// 
+// Specfic Styling
+// 
+
+// container, container-main, container-footer
+.container{
+  &-main{
+    // extend bootstrap container
+    @extend .container;
+    background: white;
+    padding: 0 4rem;
+
+    // margins on sm media breakpoint
+    @include media-breakpoint-up(sm){
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 14px 14px 14px 14px;
+    }
+  }
+
+  &-footer{
+    height: 4rem;
+    display: flex;
+    & span{
+      margin: auto 0 0 auto;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+// 
+// Header Styling
+// 
+.header{  
+  text-align: center;
+  // Header Title
+  &-title{
+    width: 100%;
+    margin-top: 1*$spacer;
+    margin-bottom: 1.5*$spacer;
+  }
+  // Header Main
+  &-main{
+    flex-direction: column;
+    
+    //styling at md breakpoint
+    @include media-breakpoint-up(md){
+      flex-direction: row;
+    }
+  }
+}
+
+// 
+// Contact styles
+// 
+.contact{
+  text-align: left;
+  margin-top: 0.5*$spacer;
+  margin-left: $spacer;
+  
+  // contact-icon styling
+  &-icon{
+    color: $dark; 
+    font-size: 1.2rem;
+    width: 28px;
+    text-align: center;
+  }
+  // contact-text styling
+  &-text{
+    color: $info;
+  }
+
+  // styling at md breakpoint
+  @include media-breakpoint-up(md){
+    text-align: center;
+    margin-left: 0;
+
+    &-text{
+      display: block;
+    }
+  }
+}
+
+// 
+// Main and Side containers styling
+// 
+
+.main, .side{
+  border-left: 1px dashed black;
+}
+
+// side section styling
+.side{
+  @include media-breakpoint-up(md){
+    border: 0;
+  }
+}
+
+// main sections styling
+.main{
+  h2{
+    margin-top: 1.5rem;
+  }
+  // Syling for dot symobol next to each item in main
+  .item::before{
+    content: '';
+    position: absolute;
+    margin-top: 2px;
+    width: 11px;
+    height: 11px;
+    border: 2px black solid;
+    border-radius: 100%;
+    background: white;
+    left: -6px;
+  }
+}
+
+// item styling
+.item{
+  margin-top: 1.5rem;
+  text-align: justify;
+  max-width: 620px;
+  &-title{
+    margin:0;
+    text-align: initial;
+  }
+  &-sub span{
+    margin-right: 0.5rem;
+  }
+}
+
+// Personal section styling
+.personal{
+  display: flex;
+  flex-direction: column;
+  *{
+    // center all elements
+    margin: auto;
+  }
+  &-icon{
+    display: flex;
+    height: 40px;
+    width: 45px;
+    color: white;
+    background: $secondary;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    // center icon
+    &::before{
+      margin: auto;
+    }
+  }
+  &-text{
+    display: block;
+  }
+}
+
+//
+// Progress Bars
+//
+.progress {
+  overflow: visible;
+  &,
+  &-bar {
+    height: 0.8rem;
+    border-radius: 0;
+    border: 0;
+  }
+  &-bar {
+    position: relative;
+    background: black;
+    &:hover::before,
+    &:hover::after {
+      position: absolute;
+    }
+    &:hover::before {
+      content: "";
+      width: 0;
+      height: 0;
+      right: -5px;
+      top: -5px;
+      //arrow
+      @extend %arrow-down;
+      border-top-color: $secondary;
+    }
+    &:hover::after {
+      content: attr(aria-valuenow)"%";
+      width: 36px;
+      height: 20px;
+      right: -18px;
+      top: -25px;
+      font-size: 0.7rem;
+      padding: 0.1rem;
+      background: $secondary;
+      border-radius: 4px;
+    }
+  }
+}
+
+// 
+// Circular Progress Bars
+// 
+// Size of circle
+$circSize: 50px;
+.circular{
+  width: $circSize;
+  height: $circSize;
+  border-radius: 50%;
+  display: flex;
+
+  &-inner{
+    width: calc(#{$circSize} * .9);
+    height: calc(#{$circSize} * 0.9);
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    // center internal content
+    *{
+      margin: auto;
+    }
+  }
+}
+
+
+//
+// Skillset
+//
+.skillset {
+  // container
+  &-container {
+    display: none;
+    margin-bottom: 2rem;
+  }
+  // title
+  &-title {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 0.1rem;
+    border-bottom: 1px dotted $secondary;
+  }
+  // arrows
+  &-title::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    bottom: -5px;
+    //style as arrow
+    @extend %arrow-down;
+    border-top-color: $secondary;
+  }
+}
+
+// 
+// Printable Page
+// 
+@media print{
+  a{
+    text-decoration: none !important;
+  }
+
+  // show skills
+  .skillset-container{
+    display: block;
+  }
+
+  // skillset remove underline and arrow 
+  .skillset-title, .skillset-title::after{
+    border: 0;
+  }
+  // hide progress bars
+  .progress{
+    display: none;
+  }
+}
+
+// Circular SVG
+.circsvg{
+  display: flex;
+  position: relative;
+  &-svg{
+    margin: auto;
+    fill: transparent;
+    stroke-width: 6px;
+  }
+  &-back{
+    stroke: #e9ecef;
+  }
+  &-bar{
+    stroke: black;
+  }
+  &-text{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 30%;
+    *{
+      font-size: 0.8rem;
+    }
+  }
+}
