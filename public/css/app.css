@@ -15966,6 +15966,11 @@ body {
 
 .item-sub span {
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.item p {
+  margin-bottom: 0.5rem;
 }
 
 .personal {
@@ -16090,8 +16095,17 @@ body {
 }
 
 @media print {
+  body {
+    background: none;
+  }
+
   a {
     text-decoration: none !important;
+  }
+
+  .container-main {
+    margin: 0;
+    max-width: none;
   }
 
   .skillset-container {

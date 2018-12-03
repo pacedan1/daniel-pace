@@ -4,6 +4,22 @@
 {{-- Vodafone Malta --}}
 @component('resume/inc/item')
   {{-- Title --}}
+  @slot('title', 'Backpacking Trip')  
+  
+  {{-- Subtext --}}
+  @slot('subtext')
+    <span class="text-muted">Aug 2015 – May 2018</span>
+  @endslot
+  
+  {{-- Main item Content --}}
+  <p>
+    Resigned from the position at Vodafone Malta to fulfill a long time goal of solo traveling around Europe and Morocco.
+  </p>
+@endcomponent
+
+{{-- Vodafone Malta --}}
+@component('resume/inc/item')
+  {{-- Title --}}
   @slot('title', 'IP & Transport Network Engineer')  
   
   {{-- Subtext --}}
@@ -28,8 +44,8 @@
     <li>Maintain an SDH network</li>
     <li>Maintain a DWDM & OTN networks</li>
     <li>Upkeep of submarine cable and equipment between Malta and Sicily</li>
-    <li>Provisions and sustain voice and IPLC clients</li>
-    <li>Testing and fault detection by using OTDR, power meter, Ethernet tester etc.</li>
+    <li>Provision and sustain voice and IPLC clients</li>
+    <li>Testing and measurements</li>
     <li>Network Monitoring</li>
     <li>Aid in other areas of the team where necessary</li>
   </ul>
@@ -50,6 +66,8 @@
   {{-- main item content --}}
   <p>
     Forming part of the front-end production line, my main responsability was the 
-    wire bonding process. 
+    wire bonding process. As the first full-time job after graduating, this position 
+    was the first opportunity to apply my skills as an engineer and it helped me learn 
+    and grow in the professional world. 
   </p>
 @endcomponent

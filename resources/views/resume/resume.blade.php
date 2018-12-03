@@ -7,7 +7,7 @@
       {{-- Header tile --}}
       <section class="header-title">
         <h1>DANIEL PACE</h1>
-        <p>Electronics Engineer</p>
+        {{-- <p>Electronics Engineer</p> --}}
       </section>
 
       {{-- Header content --}}

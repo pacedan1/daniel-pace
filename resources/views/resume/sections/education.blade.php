@@ -1,6 +1,24 @@
 {{-- This file should be included in resume --}}
 {{-- Contains work Experiences --}}
 
+{{-- Independent Studies --}}
+@component('resume/inc/item')
+    {{-- title --}}
+    @slot('title', 'Independent Studies')  
+    
+    {{-- subtext --}}
+    @slot('subtext')
+        <span class="text-muted">Ongoing</span>
+    @endslot
+    
+    {{-- main item content --}}
+    <p>
+        With a personal interest in the field and a career change in mind, over the past year I have  focused on learning and improving my web development skills. 
+        My programming language of choice would be PHP with Laravel as a framework for web development.
+    </p>
+    {{-- <p>Find more information with links to my github on <a class="text-info" href="//www.daniel-pace.com">my website</a>. --}}
+@endcomponent
+
 {{-- WebDev --}}
 @component('resume/inc/item')
     {{-- title --}}
@@ -48,7 +66,7 @@
     {{-- subtext --}}
     @slot('subtext')
         <span>MCAST Malta</span>
-        <span class="text-muted">Sep 2010 – Jul 2015</span>
+        <span class="text-muted">Sep 20010 – Jul 2014</span>
     @endslot
     
     {{-- main item content --}}

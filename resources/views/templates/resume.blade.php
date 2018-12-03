@@ -27,7 +27,11 @@
                     @yield('side')
                 </section>
             </section>
-            <footer class="container container-footer"><span>©Daniel Pace 2018</span></footer>
+            
+            {{-- footer --}}
+            <footer class="container container-footer">
+                <span class=" d-print-none">©Daniel Pace 2018</span>
+            </footer>
         </div>
         {{-- Main Content --}}
         @yield('content')

@@ -37,6 +37,7 @@ body{
 
 // container, container-main, container-footer
 .container{
+  // container-main
   &-main{
     // extend bootstrap container
     @extend .container;
@@ -51,6 +52,7 @@ body{
     }
   }
 
+  // container-footer
   &-footer{
     height: 4rem;
     display: flex;
@@ -153,12 +155,19 @@ body{
   margin-top: 1.5rem;
   text-align: justify;
   max-width: 620px;
+  // item-title
   &-title{
     margin:0;
     text-align: initial;
   }
+  // margin of spans in item-sub
   &-sub span{
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  // reduce space of p tags in item
+  p{
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -289,10 +298,18 @@ $circSize: 50px;
 // Printable Page
 // 
 @media print{
+  body{
+    background: none;
+  }
   a{
     text-decoration: none !important;
   }
 
+  // make container-main full page
+  .container-main{
+    margin: 0;
+    max-width: none;
+  }
   // show skills
   .skillset-container{
     display: block;

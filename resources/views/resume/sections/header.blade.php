@@ -1,6 +1,6 @@
 {{-- Contact Wrapper --}}
 <div class="contact col-md-3">
-    <a href='www.google.com.mt/maps/place/Mosta'>
+    <a href='//www.google.com.mt/maps/place/Mosta'>
         <span class="fa fa-map-marked-alt contact-icon"></span>
         <span class="contact-text">Mosta, Malta</span>
     </a>
@@ -24,8 +24,11 @@
 
 {{-- Contact Wrapper --}}
 <div class="contact col-md-3">
-    <a href='www.linkedin/in/danielpace'>
+    <a href='//www.linkedin.com/in/daniel-pace/'>
         <span class="fab fa-linkedin contact-icon"></span>
-        <span class="contact-text">LinkedIn</span>
+        {{-- hide on print --}}
+        <span class="contact-text d-print-none">LinkedIn</span>
+        {{-- on print only --}}
+        <span class="contact-text d-none d-print-block">www.linkedin/in/daniel-pace</span>
     </a>
 </div>

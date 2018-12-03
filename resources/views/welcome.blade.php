@@ -84,7 +84,7 @@
 
                 <div class="links">
                     <a href="/resume">Resume</a>
-                    <a href="#">Photography</a>
+                    <a href="//www.danielpace.photography">Photography</a>
                     <a href="/blog">Blog</a>
                     <a href="#">Codepen</a>
                     <a href="#">GitHub</a>
