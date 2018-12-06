@@ -8,7 +8,7 @@
   
   {{-- Subtext --}}
   @slot('subtext')
-    <span class="text-muted">Aug 2015 – May 2018</span>
+    <span class="text-muted">Apr 2018 – Oct 2018</span>
   @endslot
   
   {{-- Main item Content --}}
