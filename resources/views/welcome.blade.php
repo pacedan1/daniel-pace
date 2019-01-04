@@ -66,7 +66,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
@@ -76,7 +76,7 @@
                     @endif
                 </div>
             @endif
-
+ --}}
             <div class="content">
                 <div class="title m-b-md">
                     DANIEL PACE
@@ -84,10 +84,10 @@
 
                 <div class="links">
                     <a href="/resume">Resume</a>
-                    <a href="//www.danielpace.photography">Photography</a>
+                    {{-- <a href="//www.danielpace.photography">Photography</a>
                     <a href="/blog">Blog</a>
                     <a href="#">Codepen</a>
-                    <a href="#">GitHub</a>
+                    <a href="#">GitHub</a> --}}
                 </div>
             </div>
         </div>
