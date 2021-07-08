@@ -32,6 +32,9 @@
 
 {{-- Side bar --}}
 @section('side')
+  {{-- Include Description --}}
+  @include('resume/sections/description')
+  
   {{-- Include Skills --}}
   @include('resume/sections/skills')
 
